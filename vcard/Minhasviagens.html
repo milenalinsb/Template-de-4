@@ -4,28 +4,24 @@
         <link rel="icon" href="img/core-img/balao.png">
 
         <link rel="stylesheet" href="style.css">
+        <title>Minhas Viagens</title>
     </head>
     <body>
+        
         <div class="container">
             <div class="row" style="text-align: center">
                 <div class="col-12">
                     <a href="index-horizontal-about.html"><img src="img/core-img/logoweb3_editor.png" alt=""></a>
                 </div>
+                    {% for post in object_list %}
+                    <div>
+                        <p>Origem: {{ post.origin }}</p>
+                        <p>Destino: {{ post.destiny }}</p>
+                        <p>Data: {{ post.date }}</p>
+                        <p>Hora: {{ post.hour }}</p>
+                    </div>
+                {% endfor %}
             </div>
-        <div class="row row justify-content-md-center" style="text-align: center">
-        <div class="col-lg-4">
-            <h1>Tem certeza?</h1>
-            <input class="btn vcard-btn mt-15" type="reset" value="sim" />
-            <input class="btn vcard-btn mt-15" type="submit" value="não" />
-        </div>
-            <title> Deletar</title>
-            <meta charset="utf-8" />
-            <script type="text/javascript">
-                function removerElemento(elemento) {
-                    console.log("Chamou remover");
-                    elemento.remove();
-                }
-                removerElemento(botaoRemover.parentElement);
     </body>
 
 <!-- ##### All Javascript Files ##### -->
